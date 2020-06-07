@@ -20,7 +20,7 @@ RUN adduser -D myuser
 USER myuser
 
 
-RUN npm install -g code-server
+RUN npm install code-server
 
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku
