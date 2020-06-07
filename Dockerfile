@@ -1,10 +1,10 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --no-cache --update nodejs yarn bash
+RUN apk add --no-cache --update nodejs npm bash
 # ADD ./webapp/requirements.txt /tmp/requirements.txt
 
-# RUN yarn global add code-server
+RUN npm install -g code-server
 
 # # Install dependencies
 # RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
@@ -24,4 +24,4 @@ USER myuser
 # $PORT is set by Heroku
 
 
-# CMD code-server -p 0.0.0.0:$PORT
+CMD code-server 0.0.0.0:$PORT
