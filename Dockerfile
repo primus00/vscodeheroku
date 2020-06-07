@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN apk add --no-cache --update nodejs npm bash
 # ADD ./webapp/requirements.txt /tmp/requirements.txt
 
-
+RUN npm install code-server
 # # Install dependencies
 # RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 
@@ -19,8 +19,6 @@ RUN apk add --no-cache --update nodejs npm bash
 RUN adduser -D myuser
 USER myuser
 
-
-RUN npm install code-server
 
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku
