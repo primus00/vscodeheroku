@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: code-server $PORT
+  web: echo "hi there"
