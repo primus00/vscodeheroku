@@ -5,6 +5,8 @@ RUN apt-get install -y curl dpkg
 RUN curl -fOL https://github.com/cdr/code-server/releases/download/v3.4.1/code-server_3.4.1_amd64.deb
 RUN dpkg -i code-server_3.4.1_amd64.deb
 
+RUN apt-get install -y gunicorn
+
 # RUN systemctl --user enable --now code-server
 
 # Install python and pip
@@ -29,4 +31,4 @@ RUN dpkg -i code-server_3.4.1_amd64.deb
 # $PORT is set by Heroku
 
 
-# CMD code-server 0.0.0.0:$PORT
+CMD gunicorn --bind 0.0.0.0:$PORT
