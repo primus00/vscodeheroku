@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: code-server $PORT
+  web: code-server --port 0.0.0.0:$PORT
