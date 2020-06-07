@@ -29,4 +29,4 @@ RUN dpkg -i code-server_3.4.1_amd64.deb
 # $PORT is set by Heroku
 
 
-CMD code-server 0.0.0.0:$PORT
+# CMD code-server 0.0.0.0:$PORT
