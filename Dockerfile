@@ -5,7 +5,7 @@ RUN apt-get install -y curl dpkg
 RUN curl -fOL https://github.com/cdr/code-server/releases/download/v3.4.1/code-server_3.4.1_amd64.deb
 RUN dpkg -i code-server_3.4.1_amd64.deb
 
-RUN systemctl --user enable --now code-server
+# RUN systemctl --user enable --now code-server
 
 # Install python and pip
 RUN apk add --no-cache --update nodejs npm bash
