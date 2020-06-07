@@ -8,7 +8,7 @@ RUN dpkg -i code-server_3.4.1_amd64.deb
 # RUN systemctl --user enable --now code-server
 
 # Install python and pip
-RUN apk add --no-cache --update nodejs npm bash
+# RUN apk add --no-cache --update nodejs npm bash
 # ADD ./webapp/requirements.txt /tmp/requirements.txt
 # # Install dependencies
 # RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
